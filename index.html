@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Essick Croquet Videos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #1a472a 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .tournament-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .tournament-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e8f5e9;
+        }
+
+        .tournament-year {
+            background: linear-gradient(135deg, #2e7d32, #4caf50);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .tournament-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a472a;
+        }
+
+        .channel-tag {
+            font-size: 0.85rem;
+            color: #666;
+            background: #f5f5f5;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-left: auto;
+        }
+
+        .video-list {
+            list-style: none;
+        }
+
+        .video-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: #fafafa;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .video-item:hover {
+            background: #e8f5e9;
+            border-color: #4caf50;
+            transform: translateX(4px);
+        }
+
+        .video-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .play-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .play-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+            margin-left: 3px;
+        }
+
+        .video-info {
+            flex-grow: 1;
+        }
+
+        .video-title {
+            font-weight: 600;
+            color: #1a472a;
+            margin-bottom: 0.25rem;
+            text-decoration: none;
+            display: block;
+        }
+
+        .video-title:hover {
+            color: #2e7d32;
+        }
+
+        .video-meta {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .video-meta span {
+            margin-right: 1rem;
+        }
+
+        .highlight-tag {
+            background: #fff3e0;
+            color: #e65100;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.9);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            .tournament-header {
+                flex-wrap: wrap;
+            }
+
+            .channel-tag {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+
+            .video-item {
+                flex-wrap: wrap;
+            }
+
+            .play-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Matthew Essick Croquet Videos</h1>
+            <p>Association Croquet matches featuring one of America's top players</p>
+        </header>
+
+        <section class="tournament-section">
+            <div class="tournament-header">
+                <span class="tournament-year">2025</span>
+                <span class="tournament-name">AC World Championship</span>
+                <span class="channel-tag">US Croquet Association</span>
+            </div>
+            <ul class="video-list">
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=AC+Worlds+Semi+Matt+Essick+vs+Mark+Avery" class="video-title" target="_blank">
+                            AC Worlds Semi: Matt Essick vs Mark Avery - Game 1
+                        </a>
+                        <div class="video-meta">
+                            <span>~45 min</span>
+                            <span>Semifinal</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=AC+Worlds+Semi+Matt+Essick+vs+Mark+Avery" class="video-title" target="_blank">
+                            AC Worlds Semi: Matt Essick vs Mark Avery - Game 2
+                        </a>
+                        <div class="video-meta">
+                            <span>332 views</span>
+                            <span>1:09:41</span>
+                            <span>Semifinal</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=AC+Worlds+Semi+Matt+Essick+vs+Mark+Avery" class="video-title" target="_blank">
+                            AC Worlds Semi: Matt Essick vs Mark Avery - Game 3
+                        </a>
+                        <div class="video-meta">
+                            <span>306 views</span>
+                            <span>~45 min</span>
+                            <span>Semifinal</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="tournament-section">
+            <div class="tournament-header">
+                <span class="tournament-year">2023</span>
+                <span class="tournament-name">USCA AC Nationals</span>
+                <span class="channel-tag">rdiley Croquet</span>
+            </div>
+            <ul class="video-list">
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=Essick+Lawrence+Nationals+2023+croquet" class="video-title" target="_blank">
+                            Essick v Lawrence - Round of 16
+                            <span class="highlight-tag">Sextuple Attempt!</span>
+                        </a>
+                        <div class="video-meta">
+                            <span>2.5K views</span>
+                            <span>42:26</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=Essick+Cumming+semifinal+Nationals+2023+croquet" class="video-title" target="_blank">
+                            Essick v Cumming - Semifinal
+                            <span class="highlight-tag">Sextuple Tutorial</span>
+                        </a>
+                        <div class="video-meta">
+                            <span>1.7K views</span>
+                            <span>56:22</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=Essick+Watson+Final+Nationals+2023+croquet" class="video-title" target="_blank">
+                            Essick v Watson - Final Game 1
+                        </a>
+                        <div class="video-meta">
+                            <span>2.6K views</span>
+                            <span>57:56</span>
+                            <span>Final</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=Essick+Watson+Final+G2+Nationals+2023+croquet" class="video-title" target="_blank">
+                            Essick v Watson - Final Game 2
+                        </a>
+                        <div class="video-meta">
+                            <span>Final</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=Essick+Watson+Final+G3+Nationals+2023+croquet" class="video-title" target="_blank">
+                            Essick v Watson - Final Game 3
+                        </a>
+                        <div class="video-meta">
+                            <span>Final</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="tournament-section">
+            <div class="tournament-header">
+                <span class="tournament-year">2022</span>
+                <span class="tournament-name">USCA AC Nationals</span>
+                <span class="channel-tag">rdiley Croquet</span>
+            </div>
+            <ul class="video-list">
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=Essick+Watson+Nationals+2022+croquet+semifinal" class="video-title" target="_blank">
+                            Essick v Watson - Semifinal Game 3
+                        </a>
+                        <div class="video-meta">
+                            <span>1.6K views</span>
+                            <span>35:07</span>
+                            <span>Semifinal</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=Soo+Essick+Final+Nationals+2022+croquet" class="video-title" target="_blank">
+                            Soo v Essick - Final Game 1
+                        </a>
+                        <div class="video-meta">
+                            <span>1.4K views</span>
+                            <span>1:14:05</span>
+                            <span>Final</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="video-info">
+                        <a href="https://www.youtube.com/results?search_query=Soo+Essick+Final+G2+Nationals+2022+croquet" class="video-title" target="_blank">
+                            Soo v Essick - Final Game 2
+                        </a>
+                        <div class="video-meta">
+                            <span>Final</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>A collection of Association Croquet videos featuring Matthew Essick</p>
+        </footer>
+    </div>
+</body>
+</html>
