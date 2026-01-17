@@ -177,6 +177,57 @@
             color: rgba(255,255,255,0.9);
         }
 
+        .video-notes {
+            margin-top: 0.75rem;
+            padding: 0.75rem 1rem;
+            background: #f0f7f1;
+            border-left: 3px solid #4caf50;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .video-notes summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #2e7d32;
+            list-style: none;
+        }
+
+        .video-notes summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .video-notes summary::before {
+            content: "▶ ";
+            font-size: 0.7rem;
+            margin-right: 0.25rem;
+        }
+
+        .video-notes[open] summary::before {
+            content: "▼ ";
+        }
+
+        .video-notes .note-content {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #c8e6c9;
+        }
+
+        .video-notes .note-item {
+            display: flex;
+            margin-bottom: 0.25rem;
+        }
+
+        .video-notes .note-label {
+            font-weight: 500;
+            color: #1a472a;
+            min-width: 80px;
+        }
+
+        .video-notes .note-value {
+            color: #555;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 1rem;
@@ -383,6 +434,19 @@
                             <span>1:14:05</span>
                             <span>Final</span>
                         </div>
+                        <details class="video-notes">
+                            <summary>Game Notes</summary>
+                            <div class="note-content">
+                                <div class="note-item">
+                                    <span class="note-label">Opening:</span>
+                                    <span class="note-value">Super shot</span>
+                                </div>
+                                <div class="note-item">
+                                    <span class="note-label">Response:</span>
+                                    <span class="note-value">Max distance</span>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </li>
                 <li class="video-item">
